@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import "./dashboard.css";
 
 import {
@@ -19,17 +20,28 @@ export default function DashboardPage() {
     <div className="dashboard-container">
       {/* Top bar */}
       <header className="dashboard-header">
-        <div className="header-content">
-          <h1>Dashboard</h1>
-        </div>
+        <div className="header-content"></div>
       </header>
 
       {/* Main content */}
       <main className="dashboard-main">
-        {/* Title + Breadcrumb */}
-        <div className="dashboard-title">
-          <h2>Dashboard</h2>
-          <p>Dashboard features</p>
+        {/* New layout for the title area */}
+        <div className="dashboard-title-row">
+          <div className="dashboard-left">
+            {/* Replace /dashboard-icon.png with your actual icon path */}
+            <div className="dashboard-big-icon">
+              <Image
+                src="/dashboard-icon.png"
+                alt="Dashboard Icon"
+                width={60}
+                height={60}
+              />
+            </div>
+            <div className="dashboard-text-group">
+              <h2>Dashboard</h2>
+              <p>Dashboard features</p>
+            </div>
+          </div>
           <nav className="breadcrumb">
             <a href="#">Home</a> / <span>Dashboard</span>
           </nav>

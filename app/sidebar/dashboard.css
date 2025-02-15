@@ -11,11 +11,14 @@
   padding: 0;
 }
 
-/* Top bar */
+/* Top bar (unchanged) */
 .dashboard-header {
-  background-color: #002f4b; /* Dark navy bar */
+  background-color: #002f4b;
   padding: 1rem;
   color: #fff;
+  height: 58.1px;
+  display: flex;
+  align-items: center;
 }
 
 .header-content {
@@ -23,7 +26,7 @@
   margin: 0 auto;
 }
 
-/* Main content area */
+/* Main content area (unchanged) */
 .dashboard-main {
   max-width: 1200px;
   width: 100%;
@@ -31,22 +34,43 @@
   padding: 0 1rem;
 }
 
-/* Title and breadcrumb section */
-.dashboard-title {
+/* Title row container */
+.dashboard-title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* push breadcrumb to right */
+  border-bottom: 1px solid #ccc; /* optional bottom border */
+  padding-bottom: 1rem;
   margin-bottom: 1.5rem;
 }
 
-.dashboard-title h2 {
-  margin: 0 0 0.25rem;
-  font-size: 1.5rem;
-  color: #002f4b;
+/* Left side: icon + text group */
+.dashboard-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 
-.dashboard-title p {
-  margin: 0 0 0.5rem;
+/* The big teal icon (use an <Image> from Next) */
+.dashboard-big-icon img {
+  object-fit: contain;
+  /* if needed, set a background or border */
+}
+
+/* Group for "Dashboard" and "Dashboard features" */
+.dashboard-text-group h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #008080; /* Teal text for "Dashboard" */
+}
+
+.dashboard-text-group p {
+  margin: 0;
+  font-size: 0.9rem;
   color: #666;
 }
 
+/* Breadcrumb on the right */
 .breadcrumb {
   font-size: 0.9rem;
   color: #666;
@@ -61,27 +85,23 @@
   text-decoration: underline;
 }
 
-/* Cards grid */
+/* Cards grid (unchanged) */
 .cards-grid {
   display: grid;
-  /* Make each card narrower (200px) but at least one full column if needed */
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 1.5rem;
 }
 
-/* Individual card: narrower but taller */
+/* Individual card (unchanged) */
 .card {
-  background-color: #009688; /* Teal */
+  background-color: #009688;
   border-radius: 8px;
   color: #fff;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  /* More vertical space, less horizontal space */
   padding: 1rem;
   transition: transform 0.2s ease;
-
-  /* Increase the minimum height for a taller rectangle */
   min-height: 130px;
 }
 
@@ -89,27 +109,27 @@
   transform: translateY(-3px);
 }
 
-/* Left side: icon + label */
+/* Left side: icon + label (unchanged) */
 .card-left {
   display: flex;
-  flex-direction: column; /* Put icon above label, or use row if you prefer side by side */
+  flex-direction: column;
   align-items: flex-start;
   gap: 0.25rem;
 }
 
-/* Icon */
+/* Icon (unchanged) */
 .card-icon {
   font-size: 1.5rem;
   flex-shrink: 0;
 }
 
-/* Label text */
+/* Label text (unchanged) */
 .card-label {
   font-size: 1rem;
   font-weight: 500;
 }
 
-/* Right side: big number */
+/* Right side: big number (unchanged) */
 .card-number {
   font-size: 1.75rem;
   font-weight: bold;
