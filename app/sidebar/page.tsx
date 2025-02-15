@@ -54,7 +54,7 @@ export default function DashboardPage() {
               <FaUserMd className="card-icon" />
               <span className="card-label">Active Doctors</span>
             </div>
-            <span className="card-number">0</span>
+            <span className="card-number">9</span>
           </div>
 
           <div className="card">
@@ -62,7 +62,7 @@ export default function DashboardPage() {
               <FaUsers className="card-icon" />
               <span className="card-label">Active Patients</span>
             </div>
-            <span className="card-number">0</span>
+            <span className="card-number">11</span>
           </div>
 
           <div className="card">
@@ -70,7 +70,7 @@ export default function DashboardPage() {
               <FaUserTie className="card-icon" />
               <span className="card-label">Representative</span>
             </div>
-            <span className="card-number">0</span>
+            <span className="card-number">3</span>
           </div>
 
           <div className="card">
@@ -78,7 +78,7 @@ export default function DashboardPage() {
               <FaUserNurse className="card-icon" />
               <span className="card-label">Active Nurses</span>
             </div>
-            <span className="card-number">0</span>
+            <span className="card-number">5</span>
           </div>
 
           <div className="card">
@@ -86,7 +86,7 @@ export default function DashboardPage() {
               <FaCapsules className="card-icon" />
               <span className="card-label">Pharmacist</span>
             </div>
-            <span className="card-number">0</span>
+            <span className="card-number">3</span>
           </div>
 
           <div className="card">
@@ -94,7 +94,7 @@ export default function DashboardPage() {
               <FaMicroscope className="card-icon" />
               <span className="card-label">Laboratist</span>
             </div>
-            <span className="card-number">0</span>
+            <span className="card-number">1</span>
           </div>
 
           <div className="card">
@@ -102,7 +102,7 @@ export default function DashboardPage() {
               <FaMoneyCheck className="card-icon" />
               <span className="card-label">Accountant</span>
             </div>
-            <span className="card-number">0</span>
+            <span className="card-number">2</span>
           </div>
 
           <div className="card">
@@ -110,7 +110,7 @@ export default function DashboardPage() {
               <FaConciergeBell className="card-icon" />
               <span className="card-label">Receptionist</span>
             </div>
-            <span className="card-number">0</span>
+            <span className="card-number">4</span>
           </div>
         </div>
       </main>
