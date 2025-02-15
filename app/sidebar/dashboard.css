@@ -85,6 +85,10 @@
   text-decoration: underline;
 }
 
+.dashboard-text {
+  color: #009688;
+}
+
 /* Cards grid (unchanged) */
 .cards-grid {
   display: grid;

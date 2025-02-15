@@ -43,7 +43,7 @@ export default function DashboardPage() {
             </div>
           </div>
           <nav className="breadcrumb">
-            <a href="#">Home</a> / <span>Dashboard</span>
+            <a href="#">Home</a> / <span className="dashboard-text">Dashboard</span>
           </nav>
         </div>
 
