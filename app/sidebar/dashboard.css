@@ -1,0 +1,117 @@
+/* dashboard.css */
+
+/* Container that holds everything */
+.dashboard-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: #f7f7f7; /* Light gray background */
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+/* Top bar */
+.dashboard-header {
+  background-color: #002f4b; /* Dark navy bar */
+  padding: 1rem;
+  color: #fff;
+}
+
+.header-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Main content area */
+.dashboard-main {
+  max-width: 1200px;
+  width: 100%;
+  margin: 1rem auto;
+  padding: 0 1rem;
+}
+
+/* Title and breadcrumb section */
+.dashboard-title {
+  margin-bottom: 1.5rem;
+}
+
+.dashboard-title h2 {
+  margin: 0 0 0.25rem;
+  font-size: 1.5rem;
+  color: #002f4b;
+}
+
+.dashboard-title p {
+  margin: 0 0 0.5rem;
+  color: #666;
+}
+
+.breadcrumb {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.breadcrumb a {
+  text-decoration: none;
+  color: #666;
+}
+
+.breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+/* Cards grid */
+.cards-grid {
+  display: grid;
+  /* Make each card narrower (200px) but at least one full column if needed */
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Individual card: narrower but taller */
+.card {
+  background-color: #009688; /* Teal */
+  border-radius: 8px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* More vertical space, less horizontal space */
+  padding: 1rem;
+  transition: transform 0.2s ease;
+
+  /* Increase the minimum height for a taller rectangle */
+  min-height: 130px;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+}
+
+/* Left side: icon + label */
+.card-left {
+  display: flex;
+  flex-direction: column; /* Put icon above label, or use row if you prefer side by side */
+  align-items: flex-start;
+  gap: 0.25rem;
+}
+
+/* Icon */
+.card-icon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+/* Label text */
+.card-label {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+/* Right side: big number */
+.card-number {
+  font-size: 1.75rem;
+  font-weight: bold;
+  margin-left: 1rem;
+}

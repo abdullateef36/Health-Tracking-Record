@@ -1,101 +1,101 @@
+"use client";
+
+import React, { useState } from "react";
+import { useRouter } from "next/navigation";
 import Image from "next/image";
+import "./front.css"; // Import the CSS file
 
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+  const router = useRouter();
+  const [medicalID, setMedicalID] = useState("");
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+  // Function to handle "Login" click
+  const handleLogin = () => {
+    // Alert if the input is empty
+    if (!medicalID) {
+      alert("Please input your Medical ID");
+      return;
+    }
+
+    // Check if medicalID is between "0001" and "0009"
+    const validIDs = ["0001", "0002", "0003", "0004", "0005", "0006", "0007", "0008", "0009"];
+    if (validIDs.includes(medicalID)) {
+      // Redirect to /sidebar (client-side navigation)
+      router.push("/sidebar");
+    } else {
+      alert("Invalid Medical ID");
+    }
+  };
+
+  // Handle key presses in the input
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === "Enter") {
+      // Prevent any default form submission behavior
+      e.preventDefault();
+      handleLogin();
+    }
+  };
+
+  return (
+    <div>
+      {/* Header (navbar) */}
+      <header className="header">
+        {/* Logo & Title */}
+        <div className="logo-title">
+          <Image src="/logo.png" alt="Yabatech Logo" width={40} height={40} />
+          <span className="title">YABATECH MEDICAL CENTRE</span>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
+
+        {/* Navigation */}
+        <nav className="nav-links">
+          <a href="#">Solutions</a>
+          <a href="#">About</a>
+          <a href="#">Support</a>
+          <a href="#">Policies</a>
+        </nav>
+      </header>
+
+      {/* Hero Section */}
+      <section className="hero-section">
+        <h1 className="hero-title">
+          WELCOME TO YABATECH
+          <br />
+          MEDICAL CENTRE PORTAL
+        </h1>
+
+        <div className="input-container">
+          {/* Controlled password input for Medical ID */}
+          <input
+            type="password"
+            placeholder="Enter Your Medical ID"
+            value={medicalID}
+            onChange={(e) => setMedicalID(e.target.value)}
+            onKeyDown={handleKeyDown}  // Listen for Enter key
           />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+          <button onClick={handleLogin}>Login</button>
+        </div>
+
+        {/* Medical Icon (Caduceus) */}
+        <div className="medical-icon">
           <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
+            src="/medical-icon.png"
+            alt="Medical Icon"
+            width={300}
+            height={300}
+            priority
           />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        </div>
+
+        {/* Medical Record Badge */}
+        <div className="medical-record">
           <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
+            src="/medical-record.png"
+            alt="Medical Record Badge"
+            width={267}
+            height={189}
           />
-          Go to nextjs.org →
-        </a>
-      </footer>
+        </div>
+      </section>
     </div>
   );
 }

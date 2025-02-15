@@ -1,0 +1,142 @@
+/* sidebar.css */
+
+/* Base container */
+.sidebar {
+  background-color: #0a0a0a; /* Dark background for the sidebar */
+  color: #fff;
+  min-height: 100vh;
+  overflow: hidden;
+  transition: width 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Expanded vs. Collapsed widths */
+.sidebar.expanded {
+  width: 250px;
+}
+
+.sidebar.collapsed {
+  width: 60px;
+}
+
+/* Top bar */
+.sidebar-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #131D28; /* Darker background to match your screenshot */
+  padding: 16px;
+}
+
+/* Multi-colored brand text */
+.sidebar-brand {
+  margin: 0;
+  font-size: 1rem; /* Adjust size as needed */
+  line-height: 1.2;
+  white-space: nowrap; /* Keep them on the same line by default */
+}
+
+.sidebar-brand .yabatech {
+  color: #00b7b7; /* Teal color */
+  font-weight: bold;
+}
+.sidebar-brand .health {
+  color: #ffffff; /* White */
+}
+.sidebar-brand .admin {
+  color: #00ff00; /* Bright green */
+}
+
+/* Hamburger button */
+.sidebar-hamburger {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  display: flex;
+  align-items: center;
+}
+
+.hamburger-icon {
+  width: 24px;
+  height: 24px;
+}
+
+/* User info section */
+.sidebar-user {
+  display: flex;
+  align-items: center;
+  padding: 16px;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  background-color: #ccc;
+  border-radius: 9999px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.avatar-image {
+  object-fit: cover;
+}
+
+.user-info {
+  margin-left: 8px;
+}
+
+.user-welcome {
+  font-size: 0.85rem;
+  margin: 0;
+}
+
+.user-name {
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+/* Navigation links */
+.sidebar-nav {
+  padding: 16px;
+  flex: 1;
+}
+
+.sidebar-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.sidebar-nav li {
+  margin-bottom: 8px;
+}
+
+.sidebar-nav a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px;
+  text-decoration: none;
+  color: #fff;
+  border-radius: 4px;
+  transition: background 0.2s ease;
+}
+
+.sidebar-nav a:hover {
+  background-color: #008080;
+}
+
+.nav-icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+.nav-text {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
