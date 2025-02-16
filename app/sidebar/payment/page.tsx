@@ -1,7 +1,13 @@
-export default function Home() {
+"use client";
+
+import React from "react";
+
+export default function PaymentPage() {
   return (
-    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh', fontSize: '2rem' }}>
-      <h1>Hello, World!</h1>
+    <div>
+      <h1>Payment</h1>
+      <p>This is the Payment page for Health Tracking Records.</p>
+      {/* Add your dynamic payment features here */}
     </div>
   );
 }
