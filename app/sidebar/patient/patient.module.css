@@ -1,0 +1,65 @@
+.patientPage {
+  font-family: "Fira Code", monospace;
+  color: #333;
+  padding: 2rem;
+  background-color: #f5f7fa;
+}
+
+.header {
+  background: linear-gradient(135deg, #74ebd5, #acb6e5);
+  padding: 2rem;
+  text-align: center;
+  border-radius: 8px;
+  color: #fff;
+  margin-bottom: 2rem;
+}
+
+.profileSection {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.profileCard {
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  text-align: center;
+}
+
+.recordsSection {
+  margin-bottom: 2rem;
+}
+
+.chartContainer {
+  margin: 2rem 0;
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.recordsTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.recordsTable th,
+.recordsTable td {
+  border: 1px solid #ddd;
+  padding: 0.75rem;
+  text-align: center;
+}
+
+.recordsTable th {
+  background-color: #f0f0f0;
+}
+
+.footer {
+  text-align: center;
+  margin-top: 2rem;
+  color: #777;
+}

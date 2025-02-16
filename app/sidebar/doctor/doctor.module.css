@@ -1,0 +1,87 @@
+.doctorPage {
+  font-family: "Fira Code", monospace;
+  color: #333;
+  background-color: #f5f7fa;
+  padding: 2rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(135deg, #74ebd5, #acb6e5);
+  padding: 1.5rem;
+  border-radius: 8px;
+  color: white;
+  margin-bottom: 2rem;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+}
+
+.profileImage {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 1rem;
+  border: 2px solid white;
+}
+
+.profileInfo h1 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.profileInfo p {
+  margin: 0.2rem 0;
+}
+
+.clock {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.dashboard {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.chartSection, .appointmentsSection {
+  flex: 1 1 45%;
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.chartContainer {
+  position: relative;
+  height: 300px;
+}
+
+.appointmentsTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.appointmentsTable th, .appointmentsTable td {
+  padding: 0.75rem;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+.appointmentsTable th {
+  background-color: #f0f0f0;
+}
+
+.footer {
+  text-align: center;
+  color: #777;
+  margin-top: 2rem;
+}
