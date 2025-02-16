@@ -70,49 +70,49 @@ export default function Sidebar() {
       <nav className="sidebar-nav">
         <ul>
           <li>
-            <Link href="/dashboard">
+            <Link href="/sidebar">
               <FaTachometerAlt className="nav-icon" />
               {isOpen && <span className="nav-text">Dashboard</span>}
             </Link>
           </li>
           <li>
-            <Link href="/doctor">
+            <Link href="/sidebar/doctor">
               <FaUserMd className="nav-icon" />
               {isOpen && <span className="nav-text">Doctor</span>}
             </Link>
           </li>
           <li>
-            <Link href="/patient">
+            <Link href="/sidebar/patient">
               <FaUserInjured className="nav-icon" />
               {isOpen && <span className="nav-text">Patient</span>}
             </Link>
           </li>
           <li>
-            <Link href="/department">
+            <Link href="/sidebar/department">
               <FaBuilding className="nav-icon" />
               {isOpen && <span className="nav-text">Department</span>}
             </Link>
           </li>
           <li>
-            <Link href="/schedule">
+            <Link href="/sidebar/schedule">
               <FaCalendarAlt className="nav-icon" />
               {isOpen && <span className="nav-text">Schedule</span>}
             </Link>
           </li>
           <li>
-            <Link href="/appointment">
+            <Link href="/sidebar/appointment">
               <FaCalendarCheck className="nav-icon" />
               {isOpen && <span className="nav-text">Appointment</span>}
             </Link>
           </li>
           <li>
-            <Link href="/payment">
+            <Link href="/sidebar/payment">
               <FaMoneyBillAlt className="nav-icon" />
               {isOpen && <span className="nav-text">Payment</span>}
             </Link>
           </li>
           <li>
-            <Link href="/report">
+            <Link href="/sidebar/report">
               <FaChartBar className="nav-icon" />
               {isOpen && <span className="nav-text">Report</span>}
             </Link>
