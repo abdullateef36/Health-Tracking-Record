@@ -17,7 +17,7 @@ const doctorData = {
   name: "Dr. Jane Smith",
   specialization: "Cardiology",
   experience: 15,
-  profileImage: "/doctor-profile.jpeg", // Ensure this image is in your public folder
+  profileImage: "/doctor-profile.jpeg",
   appointments: [
     { date: "2025-02-20", time: "09:00 AM", patient: "John Doe", reason: "Routine Checkup" },
     { date: "2025-02-20", time: "10:30 AM", patient: "Alice Johnson", reason: "Follow-up" },
