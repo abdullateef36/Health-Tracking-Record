@@ -37,12 +37,6 @@ export default function Home() {
           <Image src="/logo.png" alt="Yabatech Logo" width={50} height={50} />
           <h1>Yabatech Medical Centre</h1>
         </div>
-        <nav className="nav-links">
-          <a href="#">Solutions</a>
-          <a href="#">About</a>
-          <a href="#">Support</a>
-          <a href="#">Policies</a>
-        </nav>
       </header>
 
       {/* Hero Section */}
