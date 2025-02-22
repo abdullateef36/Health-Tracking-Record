@@ -1,107 +1,120 @@
-/* front.css */
-
-/* Reset some default margins/padding */
-body {
+/* Reset and Base Styles */
+* {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
 }
 
-/* Header (navbar) styles */
+body, html {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f4f8;
+  color: #333;
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Header Styles */
 .header {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  padding: 12px 24px;
-  background-color: #fff;
-  color: #000;
-  border-top: 1px solid #000;
+  align-items: center;
+  background: linear-gradient(135deg, #007bff, #0056b3);
+  padding: 15px 30px;
+  color: #fff;
 }
 
-/* Logo + Title container */
 .logo-title {
   display: flex;
   align-items: center;
-  gap: 8px;
 }
 
-.logo-title .title {
-  font-weight: 600;
-  color: green;
-}
-
-/* Nav links on the right */
-.nav-links {
-  display: flex;
-  gap: 24px;
+.logo-title h1 {
+  margin-left: 10px;
+  font-size: 1.8rem;
 }
 
 .nav-links a {
+  margin-left: 25px;
+  color: #fff;
   text-decoration: none;
-  color: #000;
-  transition: color 0.2s;
+  font-size: 1rem;
+  transition: color 0.3s;
 }
 
 .nav-links a:hover {
-  text-decoration: underline;
+  color: #e0e0e0;
 }
 
-/* Hero Section styles */
+/* Hero Section */
 .hero-section {
-  position: relative;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 89.3vh;
-  padding: 0 40px;
-  background-color: green; /* bright green background */
-  color: #fff;
-  overflow: hidden;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 30px;
+  background: linear-gradient(135deg, #e9f0f7, #ffffff);
 }
 
-.hero-title {
+.hero-content {
+  flex: 1;
+  min-width: 300px;
+  margin-right: 30px;
+}
+
+.hero-content h2 {
   font-size: 2.5rem;
-  font-weight: 800;
-  line-height: 1.2;
-  margin-bottom: 24px;
+  margin-bottom: 15px;
+  color: #0056b3;
 }
 
-/* Input + button container */
+.hero-content p {
+  font-size: 1.1rem;
+  margin-bottom: 25px;
+  color: #555;
+}
+
+/* Input Container */
 .input-container {
   display: flex;
-  width: 100%;
   max-width: 400px;
-  background-color: #fff;
-  padding: 8px;
-  border-radius: 8px;
 }
 
 .input-container input {
   flex: 1;
-  padding: 8px;
-  color: #4a4a4a;
-  border: none;
+  padding: 12px;
+  border: 2px solid #007bff;
+  border-right: none;
+  border-radius: 5px 0 0 5px;
+  font-size: 1rem;
   outline: none;
-  font-style: italic;
 }
 
 .input-container button {
-  background-color: green;
+  padding: 12px 20px;
+  border: 2px solid #007bff;
+  background-color: #007bff;
   color: #fff;
-  padding: 8px 16px;
-  border-radius: 8px;
+  font-size: 1rem;
+  border-radius: 0 5px 5px 0;
   cursor: pointer;
+  transition: background-color 0.3s;
 }
 
-/* Position the medical icon and record badge */
-.medical-icon {
-  position: absolute;
-  top: 40px;
-  right: 40px;
+.input-container button:hover {
+  background-color: #0056b3;
 }
 
-.medical-record {
-  position: absolute;
-  top: 280px;
-  right: 400px; /* adjust as needed */
+/* Hero Images */
+.hero-images {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+  margin-top: 20px;
 }

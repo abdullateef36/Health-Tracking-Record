@@ -106,9 +106,9 @@ export default function Sidebar() {
             </Link>
           </li>
           <li>
-            <Link href="/sidebar/payment">
+            <Link href="/sidebar/prescription">
               <FaMoneyBillAlt className="nav-icon" />
-              {isOpen && <span className="nav-text">Payment</span>}
+              {isOpen && <span className="nav-text">Prescription Management</span>}
             </Link>
           </li>
           <li>
