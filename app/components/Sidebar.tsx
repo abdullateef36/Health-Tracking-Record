@@ -12,7 +12,7 @@ import {
   FaBuilding,
   FaCalendarAlt,
   FaCalendarCheck,
-  FaMoneyBillAlt,
+  FaPills,
   FaChartBar,
 } from "react-icons/fa";
 
@@ -107,7 +107,7 @@ export default function Sidebar() {
           </li>
           <li>
             <Link href="/sidebar/prescription">
-              <FaMoneyBillAlt className="nav-icon" />
+              <FaPills className="nav-icon" />
               {isOpen && <span className="nav-text">Prescription Management</span>}
             </Link>
           </li>
