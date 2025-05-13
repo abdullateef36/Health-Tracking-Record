@@ -1,65 +1,99 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
-import "./front.css"; // Import the updated CSS file
+import "./front.css";
 
 export default function Home() {
   const router = useRouter();
-  const [medicalID, setMedicalID] = useState("");
+  const [isAnimating, setIsAnimating] = useState(true);
 
-  const handleLogin = () => {
-    if (!medicalID) {
-      alert("Please input your Medical ID");
-      return;
-    }
-    const validIDs = ["0001", "0002", "0003", "0004", "0005", "0006", "0007", "0008", "0009"];
-    if (validIDs.includes(medicalID)) {
-      router.push("/sidebar");
-    } else {
-      alert("Invalid Medical ID");
-    }
-  };
+  // Animation effect for the button
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIsAnimating(prev => !prev);
+    }, 2000);
+    return () => clearInterval(interval);
+  }, []);
 
-  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
-    if (e.key === "Enter") {
-      e.preventDefault();
-      handleLogin();
-    }
+  const handleCheckIn = () => {
+    router.push("/sidebar");
   };
 
   return (
     <div className="container">
+      {/* Animated Background */}
+      <div className="animated-background">
+        <div className="bubble bubble-1"></div>
+        <div className="bubble bubble-2"></div>
+        <div className="bubble bubble-3"></div>
+        <div className="bubble bubble-4"></div>
+        <div className="bubble bubble-5"></div>
+      </div>
+
       {/* Header */}
       <header className="header">
         <div className="logo-title">
-          <Image src="/logo.png" alt="Yabatech Logo" width={50} height={50} />
-          <h1>Yabatech Medical Centre</h1>
+          <Image
+            src="/logo.png"
+            alt="Yabatech Logo"
+            width={60}
+            height={60}
+            className="logo"
+          />
+          <div className="title-container">
+            <h1>Yabatech Medical Centre</h1>
+            <p className="tagline">Excellence in Healthcare Delivery</p>
+          </div>
         </div>
       </header>
 
       {/* Hero Section */}
       <section className="hero-section">
         <div className="hero-content">
-          <h2>Welcome to Your Medical Portal</h2>
-          <p>Access your records and manage your health seamlessly.</p>
-          <div className="input-container">
-            <input
-              type="password"
-              placeholder="Enter Your Medical ID"
-              value={medicalID}
-              onChange={(e) => setMedicalID(e.target.value)}
-              onKeyDown={handleKeyDown}
-            />
-            <button onClick={handleLogin}>Login</button>
+          <h2>Your Health, Our Priority</h2>
+          <p className="subtitle">
+            Access comprehensive medical services and manage your health records with ease.
+          </p>
+
+          <div
+            className={`check-in-button ${isAnimating ? 'pulse' : ''}`}
+            onClick={handleCheckIn}
+          >
+            <span>Click to check your medical records</span>
+            <div className="arrow-icon">→</div>
+          </div>
+
+          <div className="features-grid">
+            <div className="feature-card">
+              <div className="feature-icon">⚕️</div>
+              <h3>24/7 Access</h3>
+              <p>View your records anytime, anywhere</p>
+            </div>
+            <div className="feature-card">
+              <div className="feature-icon">📱</div>
+              <h3>Digital Prescriptions</h3>
+              <p>Access your medications digitally</p>
+            </div>
+            <div className="feature-card">
+              <div className="feature-icon">🔒</div>
+              <h3>Secure</h3>
+              <p>Your data is always protected</p>
+            </div>
           </div>
         </div>
-        <div className="hero-images">
-          <Image src="/medical-icon.png" alt="Medical Icon" width={300} height={300} priority />
-          <Image src="/medical-record.png" alt="Medical Record Badge" width={267} height={189} />
-        </div>
       </section>
+
+      {/* Footer */}
+      <footer className="footer">
+        <p>© {new Date().getFullYear()} Yabatech Medical Centre. All rights reserved.</p>
+        <div className="footer-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Contact Us</a>
+        </div>
+      </footer>
     </div>
   );
 }

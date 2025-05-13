@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import dynamic from "next/dynamic";
+import "chart.js/auto";
 import { format } from "date-fns";
 import styles from "./appointment.module.css";
 
@@ -10,7 +11,6 @@ const LineChart = dynamic(
   () => import("react-chartjs-2").then((mod) => mod.Line),
   { ssr: false }
 );
-import "chart.js/auto";
 
 // Sample appointment data
 const appointments = [

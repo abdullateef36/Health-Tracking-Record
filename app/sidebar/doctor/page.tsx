@@ -2,7 +2,6 @@
 
 import React, { useState, useEffect } from "react";
 import dynamic from "next/dynamic";
-import "chart.js/auto"; // Automatically registers Chart.js components
 import styles from "./doctor.module.css";
 import Image from "next/image";
 
@@ -11,6 +10,7 @@ const BarChart = dynamic(
   () => import("react-chartjs-2").then((mod) => mod.Bar),
   { ssr: false }
 );
+import "chart.js/auto";
 
 // Sample doctor profile and appointment data
 const doctorData = {
